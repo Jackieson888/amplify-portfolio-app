@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Github",
+        "path": "github.svg",
+        "link": "https://github.com/Jackieson888"
+    },
+    {
+        "title": "LinkedIn",
+        "path": "linkedin.svg",
+        "link": "www.linkedin.com/in/jackson-schacher"
+    },
+    {
+        "title": "Email",
+        "path": "email.svg",
+        "link": "jschacher8@gmail.com"
+    }
+]

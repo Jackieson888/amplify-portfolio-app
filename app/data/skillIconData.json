@@ -1,0 +1,98 @@
+[
+    {
+        "title": "React",
+        "path": "react.svg"
+    },
+    {
+        "title": "Angular",
+        "path": "angular.svg"
+    },
+    {
+        "title": "Vue",
+        "path": "vuejs.svg"
+    },
+    {
+        "title": "TypeScript",
+        "path": "language-typescript.svg"
+    },
+    {
+        "title": "JavaScript",
+        "path": "language-javascript.svg"
+    },
+    {
+        "title": "C#",
+        "path": "language-csharp.svg"
+    },
+    {
+        "title": "Node.js",
+        "path": "nodejs.svg"
+    },
+    {
+        "title": ".NET",
+        "path": "dot-net.svg"
+    },
+    {
+        "title": "Golang",
+        "path": "language-go.svg"
+    },
+    {
+        "title": "Sass",
+        "path": "sass.svg"
+    },
+    {
+        "title": "Tailwind",
+        "path": "tailwind.svg"
+    },
+    {
+        "title": "Bootstrap",
+        "path": "bootstrap.svg"
+    },
+    {
+        "title": "HTML 5",
+        "path": "language-html5.svg"
+    },
+    {
+        "title": "Vuetify",
+        "path": "vuetify.svg"
+    },
+    {
+        "title": "Material Design",
+        "path": "material-design.svg"
+    },
+    {
+        "title": "C++",
+        "path": "language-cpp.svg"
+    },
+    {
+        "title": "Git",
+        "path": "git.svg"
+    },
+    {
+        "title": "RESTful API",
+        "path": "api.svg"
+    },
+    {
+        "title": "AWS Services",
+        "path": "aws.svg"
+    },
+    {
+        "title": "Docker",
+        "path": "docker.svg"
+    },
+    {
+        "title": "Mapbox",
+        "path": "mapbox.svg"
+    },
+    {
+        "title": "Atlassian",
+        "path": "atlassian.svg"
+    },
+    {
+        "title": "Jira",
+        "path": "jira.svg"
+    },
+    {
+        "title": "VS Code",
+        "path": "microsoft-visual-studio-code.svg"
+    }
+]

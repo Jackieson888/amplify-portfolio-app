@@ -1,0 +1,26 @@
+[
+    {
+        "question": "If you could Animorph right now, which animal would you want to become?",
+        "options": [
+            {
+                "text": "Grizzly Bear",
+                "increaseAttrs": [
+                    "energy",
+                    "loudness"
+                ],
+                "decreaseAttrs": [
+                    "tempo",
+                    "danceability"
+                ],
+                "randomIncrease": [
+                    "acousticness",
+                    "popularity"
+                ],
+                "randomDecrease": [
+                    "instrumentalness",
+                    "valence"
+                ]
+            }
+        ]
+    }
+]0

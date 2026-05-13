@@ -1,52 +1,78 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "@/amplify/data/resource";
-import "./../app/app.css";
-import { Amplify } from "aws-amplify";
-import outputs from "@/amplify_outputs.json";
-import "@aws-amplify/ui-react/styles.css";
+import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
+import IconTag from "./components/iconTag";
+import iconData from "./data/skillIconData.json";
 
-Amplify.configure(outputs);
-
-const client = generateClient<Schema>();
-
-export default function App() {
-  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
-
-  function listTodos() {
-    client.models.Todo.observeQuery().subscribe({
-      next: (data) => setTodos([...data.items]),
-    });
-  }
-
-  useEffect(() => {
-    listTodos();
-  }, []);
-
-  function createTodo() {
-    client.models.Todo.create({
-      content: window.prompt("Todo content"),
-    });
-  }
-
+export default function Home() {
+  const [active, setActive] = useState(false)
   return (
-    <main>
-      <h1>My todos</h1>
-      <button onClick={createTodo}>+ new</button>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.content}</li>
-        ))}
-      </ul>
-      <div>
-        🥳 App successfully hosted. Try creating a new todo.
-        <br />
-        <a href="https://docs.amplify.aws/nextjs/start/quickstart/nextjs-app-router-client-components/">
-          Review next steps of this tutorial.
-        </a>
+    <div className="flex flex-col w-full justify-between">
+      <div className="flex items-start w-full justify-between">
+        <div>
+          <h1 className="text-2xl text-primary-500 font-sans font-semibold">Jackson Schacher</h1>
+          <div>
+            <ul>
+              <li>
+                <span className="font-mono text-sm">Full Stack Engineer</span>
+              </li>
+              <li>
+                <span className="font-mono text-sm opacity-50">UI/UX Designer</span>
+              </li>
+              <li>
+                <span className="font-mono text-sm opacity-25">Web App Dev</span>
+              </li>
+              <li>
+                <span className="font-mono text-sm opacity-10">Software Developer</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <Image
+          src="/profile-pic.png"
+          alt="Jackson Schacher"
+          width={128}
+          height={128}
+          className="rounded-md"
+          loading="eager"
+        />
       </div>
-    </main>
+      <div className="flex">
+
+        <div className="flex justify-center w-full">
+          <Link
+            href="/chat"
+            prefetch={active ? null : false}
+            onMouseEnter={() => setActive(true)}
+            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative font-mono"
+          >
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+              <span>AI Chat App</span>
+            </button>
+          </Link>
+        </div>
+        <div className="flex justify-center w-full">
+          <Link
+            href="/spotify"
+            prefetch={active ? null : false}
+            onMouseEnter={() => setActive(true)}
+            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative font-mono"
+          >
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+              <span>Song Questionaire App</span>
+            </button>
+          </Link>
+        </div>
+      </div>
+      <div className="flex">
+        <div className="flex flex-wrap w-full justify-around mt-2">
+          {iconData.map((icon) => (
+            <IconTag iconData={icon} key={icon.title} />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
