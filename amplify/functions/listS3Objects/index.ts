@@ -2,8 +2,8 @@ import { S3Client, ListObjectsV2Command } from "@aws-sdk/client-s3";
 import { secret } from "@aws-amplify/backend";
 
 export const handler = async () => {
-  const region = process.env.S3_REGION!;
-  const bucket = process.env.S3_BUCKET!;
+  const region = 'us-west-2';
+  const bucket = 'public-gallery-portfolio-app';
 
   const accessKeyId = secret("S3_ACCESS_KEY_ID").value();
   const secretAccessKey = secret("S3_SECRET_ACCESS_KEY").value();

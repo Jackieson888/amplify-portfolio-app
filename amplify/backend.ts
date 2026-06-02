@@ -9,8 +9,8 @@ defineBackend({
   listS3Objects: defineFunction({
     entry: "./functions/listS3Objects/index.ts",
     environment: {
-      S3_REGION: process.env.S3_REGION!,
-      S3_BUCKET: process.env.S3_BUCKET!,
+      S3_REGION: 'us-west-2',
+      S3_BUCKET: 'public-gallery-portfolio-app',
     },
     secrets: [
       secret("S3_ACCESS_KEY_ID"),
